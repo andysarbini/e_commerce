@@ -61,7 +61,7 @@
                         @foreach ($products as $product)                            
                             <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
                                 <div class="product product-style-3 equal-elem ">
-                                    <div class="product-thumnail">
+                                    <div class="product-thumbnail">
                                         <a href="{{ route('product.details', ['slug'=>$product->slug]) }}" title="{{ $product->name }}">
                                             <figure><img src="{{ asset('assets/images/products') }}/{{ $product->image }}" alt="{{ $product->name }}"></figure>
                                         </a>
@@ -69,7 +69,8 @@
                                     <div class="product-info">
                                         <a href="{{ route('product.details', ['slug'=>$product->slug]) }}" class="product-name"><span>{{ $product->name }}</span></a>
                                         <div class="wrap-price"><span class="product-price">{{ $product->regular_price }}</span></div>
-                                        <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}', {{ $product->regular_price }})">Add To Cart</a>
+                                        {{-- <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id, '{{ $product->name }}'}}, {{ $product->regular_price }})">Add To Cart</a> --}}
+                                        <a href="#" class="btn add-to-cart" >Add To Cart</a>
                                     </div>
                                 </div>
                             </li>
@@ -172,7 +173,7 @@
                                 <div class="product product-widget-style">
                                     <div class="thumbnnail">
                                         <a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-                                            <figure><img src="{{ asset('assets/images/products/digital_01.jpg') }}" alt=""></figure>
+                                            <figure><img src="{{ asset('assets/images/products/digital_1.jpg') }}" alt=""></figure>
                                         </a>
                                     </div>
                                     <div class="product-info">
