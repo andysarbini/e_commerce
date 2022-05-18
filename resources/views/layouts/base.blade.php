@@ -11,11 +11,14 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+	{{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> --}}
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
+
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     @livewireStyles
 </head>
 <body class="home-page home-01 ">
@@ -84,6 +87,9 @@
 													</li>
 													<li class="menu-item">
 														<a href="{{route('admin.homeslider')}}" title="Manage Home Slider">Manage Home Slider</a>
+													</li>
+													<li class="menu-item">
+														<a href="{{route('admin.homecategories')}}" title="Manage Home Categories">Manage Home Categories</a>
 													</li>
 													<li class="menu-item">
 														<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -459,15 +465,24 @@
 		</div>
 	</footer>
 	
-	<script src="{{  asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
-	<script src="{{  asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
-	<script src="{{  asset('assets/js/bootstrap.min.js') }}"></script>
+	{{-- <script src="{{  asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4') }}"></script> --}}
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	{{-- <script src="{{  asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4') }}"></script> --}}
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+	{{-- <script src="{{  asset('assets/js/bootstrap.min.js') }}"></script> --}}
+	{{-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> --}}
+	{{-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> --}}
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 	<script src="{{  asset('assets/js/jquery.flexslider.js') }}"></script>
 	<script src="{{  asset('assets/js/chosen.jquery.min.js') }}"></script>
 	<script src="{{  asset('assets/js/owl.carousel.min.js') }}"></script>
 	<script src="{{  asset('assets/js/jquery.countdown.min.js') }}"></script>
 	<script src="{{  asset('assets/js/jquery.sticky.js') }}"></script>
 	<script src="{{  asset('assets/js/functions.js') }}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     @livewireScripts
+
+	@stack('scripts')
 </body>
 </html>
